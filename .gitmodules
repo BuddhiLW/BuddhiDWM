@@ -1,0 +1,6 @@
+[submodule "yay-bin"]
+	path = yay-bin
+	url = https://aur.archlinux.org/yay-bin.git
+[submodule "dwmblocks-other"]
+	path = dwmblocks-other
+	url = https://github.com/Randoragon/dwmblocks.git
