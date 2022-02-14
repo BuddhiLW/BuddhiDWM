@@ -56,12 +56,18 @@ static char *fonts[] = {"Fantasque Sans Mono:size=17",
 //};
 /* ************ */
 
-static char normbgcolor[] = "#333333"; // #222222
-static char normbordercolor[] = "#444444";
-static char normfgcolor[] = "#bbbbbb";
-static char selfgcolor[] = "#eeffff";
-static char selbordercolor[] = "#3ef0bb"; //#3355FF
-static char selbgcolor[] = "#f03e59";     //#ff5f33
+//static char col_gray0[]       = "#BD78DF";
+//static char col_gray2[]       = "#D9B474";
+//static char col_gray3[]       = "#73259A";
+//static char col_gray4[]       = "#9047AD";
+//static char col_cyan[]        = "#5249AE";
+// static char col_gray6[] = "#282c34";
+static char normbgcolor[] = "#F3F3F3"; // 
+static char normbordercolor[] = "#B98E76"; // 
+static char normfgcolor[] = "#111111";
+static char selfgcolor[] = "#374B93";
+static char selbordercolor[] = "#E93727";
+static char selbgcolor[] = "#2B1A24";
 static char *colors[][3] = {
     /*               fg           bg           border   */
     [SchemeNorm] = {normfgcolor, normbgcolor, normbordercolor},
@@ -317,7 +323,9 @@ static Key keys[] = {
     {MODKEY, XK_F1, spawn,
      SHCMD("groff -mom /usr/local/share/dwm/larbs.mom -Tpdf | zathura -")},
     {MODKEY, XK_F2, spawn, SHCMD("tutorialvids")},
-    {MODKEY, XK_F3, spawn, SHCMD("displayselect")},
+    {MODKEY, XK_F3, spawn,
+     SHCMD("prime-run displayselect")}, // if you are not using your graphics
+                                        // card, don't run `prime-run`
     {MODKEY, XK_F4, spawn,
      SHCMD(TERMINAL " -e pulsemixer; kill -44 $(pidof dwmblocks)")},
     /* { MODKEY,			XK_F5,		xrdb,		{.v =
